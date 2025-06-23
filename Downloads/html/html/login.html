@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - ESPRIT App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #8b0000, #330000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .login-container {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.6s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #8b0000;
+      margin-bottom: 0.4rem;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: #f2f2f2;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      padding: 0.8rem 1rem;
+      transition: background 0.3s;
+    }
+
+    .form-group:focus-within {
+      background: #e9e9e9;
+    }
+
+    .form-group i {
+      margin-right: 0.8rem;
+      color: #8b0000;
+    }
+
+    .form-group input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #333;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder {
+      color: #aaa;
+    }
+
+    .forgot {
+      text-align: right;
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      color: #b30000;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #b30000, #330000);
+      color: white;
+      width: 100%;
+      padding: 0.9rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(to right, #a00000, #220000);
+    }
+
+    .divider {
+      text-align: center;
+      margin: 1.8rem 0;
+      color: #aaa;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ddd;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .signup-link {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .signup-link a {
+      color: #b30000;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn-google {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #444;
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-google:hover {
+      background: #f5f5f5;
+    }
+
+    .btn-google img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Connexion</h2>
+
+    <form>
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Adresse e-mail" required />
+      </div>
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Mot de passe" required />
+      </div>
+
+      <a class="forgot" href="#">Mot de passe oublié ?</a>
+
+      <button class="btn-primary" type="submit">Se connecter</button>
+    </form>
+
+    <div class="divider">ou</div>
+
+    <button type="button" class="btn-google">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+      Continuer avec Google
+    </button>
+
+    <p class="signup-link">Pas encore de compte ? <a href="create-account.html">Créer un compte</a></p>
+  </div>
+</body>
+</html>

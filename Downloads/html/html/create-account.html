@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Estival - Créer un compte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffeaea, #8b0000);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: white;
+      padding: 1.5rem 2rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      color: #b30000;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 0.5rem 0;
+      gap: 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b0000;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    .section {
+      background-color: #f8dede;
+      padding: 2rem;
+      border-radius: 25px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #8b0000;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      color: #400000;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="file"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    form input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    .avatar-selection {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .avatar-selection img {
+      width: 64px;
+      height: 64px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .avatar-selection img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background: linear-gradient(to right, #b30000, #800000);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: linear-gradient(to right, #a30000, #5c0000);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .avatar-selection {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌴 Crée ton compte estival ! 🌞</h1>
+  </header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="teacher-dashboard.html">Tableau de bord</a>
+    <a href="groupes.html">Groupes</a>
+  </nav>
+  <div class="container">
+    <div class="section">
+      <h2>Personnalise ton aventure ! 🏝️</h2>
+      <form class="create-account">
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Entre ton nom" required>
+
+        <label for="firstname">Prénom :</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Entre ton prénom" required>
+
+        <label for="classe">Classe :</label>
+        <input type="text" id="classe" name="classe" placeholder="Ex: 2ème A" required>
+
+        <label for="avatarUpload">Téléverse une image :</label>
+        <input type="file" id="avatarUpload" name="avatarUpload" accept="image/*">
+
+    
+       <label>Sexe :</label>
+<div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 1rem;">
+  <label style="display: flex; align-items: center; gap: 0.5rem;">
+    <input type="radio" id="homme" name="sexe" value="Homme" required>
+    Homme
+  </label>
+  <label style="display: flex; align-items: center; gap: 0.5rem;">
+    <input type="radio" id="femme" name="sexe" value="Femme" required>
+    Femme
+  </label>
+</div>
+        <label for="email">Adresse email :</label>
+        <input type="email" id="email" name="email" placeholder="nom@example.com" required>
+
+        <label>Choisis ton avatar :</label>
+        <div class="avatar-selection">
+          <img src="https://img.icons8.com/color/96/000000/sun--v1.png" alt="Avatar Soleil" onclick="selectAvatar(this)">
+          <img src="https://img.icons8.com/color/96/000000/palm-tree.png" alt="Avatar Palmier" onclick="selectAvatar(this)">
+          <img src="https://img.icons8.com/color/96/000000/island.png" alt="Avatar Île" onclick="selectAvatar(this)">
+          <img src="https://img.icons8.com/color/96/000000/pineapple.png" alt="Avatar Ananas" onclick="selectAvatar(this)">
+        </div>
+
+        <button type="submit" onclick="playSound('click')">Créer mon compte</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

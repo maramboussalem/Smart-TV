@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Répartition des groupes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffeaea, #8b0000);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: #b30000;
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 0.5rem 0;
+      gap: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b0000;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #f8dede;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #8b0000;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .group {
+      margin-bottom: 2rem;
+    }
+
+    .group h3 {
+      color: #b30000;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      background-color: white;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Répartition des Groupes & Équipes</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="teacher-dashboard.html">Tableau de bord</a>
+    <a href="groupes.html">Groupes</a>
+  </nav>
+
+  <div class="container">
+    <h2>Liste des groupes et étudiants</h2>
+
+    <div class="group">
+      <h3>Groupe 1 🌟</h3>
+      <ul>
+        <li>Étudiant A</li>
+        <li>Étudiant B</li>
+        <li>Étudiant C</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Groupe 2 🚀</h3>
+      <ul>
+        <li>Étudiant D</li>
+        <li>Étudiant E</li>
+        <li>Étudiant F</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Groupe 3 🌴</h3>
+      <ul>
+        <li>Étudiant G</li>
+        <li>Étudiant H</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

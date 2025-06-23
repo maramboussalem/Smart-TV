@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Estival - Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌴 Quiz Estival : À toi de jouer ! 🌞</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="create-account.html">Créer un compte</a>
+            <a href="join-quiz.html">Rejoindre un Quiz</a>
+            <a href="teacher-dashboard.html">Tableau de bord</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Quiz : <span id="category-name"></span> 🏝️</h2>
+            <div class="progress-map">
+                <div class="island" onclick="goToIsland(1)">Île 1 🌴</div>
+                <div class="island" onclick="goToIsland(2)">Île 2 🌊</div>
+                <div class="island" onclick="goToIsland(3)">Île 3 🌞</div>
+            </div>
+            <div class="question">
+                <h3>Question <span id="question-number"></span></h3>
+                <p id="question-text"></p>
+                <label><input type="radio" name="answer" value="1"> <span id="answer1"></span></label>
+                <label><input type="radio" name="answer" value="2"> <span id="answer2"></span></label>
+                <label><input type="radio" name="answer" value="3"> <span id="answer3"></span></label>
+                <label><input type="radio" name="answer" value="4"> <span id="answer4"></span></label>
+                <button onclick="submitAnswer(); playSound('click')">Soumettre</button>
+            </div>
+            <div class="score">Score : <span id="score">0</span> 🌟</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

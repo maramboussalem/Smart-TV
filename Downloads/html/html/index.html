@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Estival - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffeaea, #8b0000);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: white;
+      padding: 1.5rem 2rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      color: #b30000;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header h1::before {
+      content: "🎓";
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 0.5rem 0;
+      gap: 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b0000;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 1rem;
+    }
+
+    .section {
+      background-color: #f8dede;
+      padding: 2rem;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 700px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      color: #8b0000;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #b30000, #800000);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #a30000, #5c0000);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur QuizMaster</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="teacher-dashboard.html">Tableau de bord</a>
+    <a href="groupes.html">Groupes</a>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+      <h2>Apprends, Joue et Progresse !</h2>
+      <p>
+        QuizMaster est une plateforme éducative ludique qui te permet de
+        tester tes connaissances, d'apprendre de façon interactive et de
+        t'amuser en créant ou en rejoignant des quiz. Conçue pour les élèves,
+        les enseignants et les curieux du savoir.
+      </p>
+     <div class="cta-buttons">
+  <a href="create-account.html" class="btn">Créer un compte</a>
+  <a href="login.html" class="btn">Se connecter</a>
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
